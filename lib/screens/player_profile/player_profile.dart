@@ -5,6 +5,7 @@ import 'package:demo_app/widgets/circle_avatar.dart';
 import 'package:demo_app/widgets/core/app_background.dart';
 import 'package:demo_app/widgets/core/app_bar/app_bar.dart';
 import 'package:demo_app/widgets/core/app_blur.dart';
+import 'package:demo_app/widgets/core/app_tabbar/app_tabbar.dart';
 import 'package:demo_app/widgets/design/button/app_button/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,6 @@ part 'widgets/_body.dart';
 part 'state.dart';
 part 'data.dart';
 part 'widgets/helper_widgets.dart';
-part 'widgets/tab_bar_section.dart';
 part 'widgets/tabbar_views/schedule_view.dart';
 
 class PlayerProfileScreen extends StatelessWidget {

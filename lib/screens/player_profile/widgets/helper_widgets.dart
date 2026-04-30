@@ -187,3 +187,15 @@ Widget _buildGameButton(String label, {bool fullWidth = false}) {
     ),
   );
 }
+
+Widget _comingSoon(String title) {
+  return Padding(
+    padding: Space.all(40),
+    child: Center(
+      child: Text(
+        '$title coming soon',
+        style: AppText.b1!.cl(AppTheme.c.white.base),
+      ),
+    ),
+  );
+}

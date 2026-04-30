@@ -104,3 +104,30 @@ Widget _buildScheduleList(List<GameScheduleItem> items) {
     ],
   );
 }
+
+Widget _buildScheduleTab() {
+  return Padding(
+    padding: Space.all(24),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'UPCOMING GAME',
+          style: AppText.h2xb!.copyWith(letterSpacing: 1.2),
+        ),
+        16.verticalSpace,
+
+        _buildUpcomingGameCard(),
+
+        40.verticalSpace,
+
+        Text('JANUARY 2026', style: AppText.h2xb),
+        24.verticalSpace,
+
+        _buildScheduleList(_schedule),
+
+        24.verticalSpace,
+      ],
+    ),
+  );
+}

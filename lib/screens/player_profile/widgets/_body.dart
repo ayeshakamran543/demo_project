@@ -15,13 +15,13 @@ class _Body extends StatelessWidget {
           height: 24.h,
         ),
       ),
-      body: AppBackground(
-        horizontalPadding: 0,
+      body: SingleChildScrollView(
+        child: AppBackground(
+          horizontalPadding: 0,
 
-        includeBottomPadding: false,
+          includeBottomPadding: false,
 
-        backgroundImage: 'assets/pngs/playerProfile_bg.png',
-        child: SingleChildScrollView(
+          backgroundImage: 'assets/pngs/playerProfile_bg.png',
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -144,4 +144,26 @@ class _Body extends StatelessWidget {
       ),
     );
   }
+}
+
+// ── Tab Section ─────────────────────────────────────────────────────────────
+Widget _buildTabSection(BuildContext context) {
+  final state = _ScreenState.s(context, true);
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      14.verticalSpace,
+      GradientTabSection(
+        tabs: ['Schedule', 'Followers', 'Video', 'Stats'],
+        selectedIndex: state.selectedTab,
+        onTabChanged: state.setTab,
+        tabViews: [
+          _buildScheduleTab(),
+          _comingSoon('Followers'),
+          _comingSoon('Video'),
+          _comingSoon('Stats'),
+        ],
+      ),
+    ],
+  );
 }
