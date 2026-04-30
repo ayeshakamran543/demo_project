@@ -17,6 +17,9 @@ class _Body extends StatelessWidget {
       ),
       body: AppBackground(
         horizontalPadding: 0,
+
+        includeBottomPadding: false,
+
         backgroundImage: 'assets/pngs/playerProfile_bg.png',
         child: SingleChildScrollView(
           child: Column(

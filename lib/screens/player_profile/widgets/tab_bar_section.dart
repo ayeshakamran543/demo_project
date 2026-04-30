@@ -1,7 +1,5 @@
 part of '../player_profile.dart';
 
-// ── Tabs ───────────────────────────────────────────────────────────────────
-
 Widget _buildTabSection(BuildContext context) {
   // Read selected tab from state
   final state = _ScreenState.s(context, true);
@@ -91,17 +89,7 @@ Widget _buildTabContent(_ScreenState state) {
         40.verticalSpace,
         Text('JANUARY 2026', style: AppText.h2xb),
         24.verticalSpace,
-        // In _buildTabContent method:
-        Column(
-          children: _schedule.asMap().entries.map((entry) {
-            final index = entry.key;
-            final item = entry.value;
-            final bool showLine =
-                index !=
-                _schedule.length - 1; // Don't show line after last item
-            return _buildScheduleRow(item, showLine: showLine);
-          }).toList(),
-        ),
+        _buildScheduleList(_schedule),
         24.verticalSpace,
       ],
     ),
