@@ -43,6 +43,10 @@ class AppCoreTheme {
   final Color orange;
   final Color green;
   final Color lightGreen;
+  final Color red;
+  final Color textGrey;
+  final Color blue;
+  final Color searchfield;
 
   final AppGradient primaryGradient;
   final AppGradient secondaryGradient;
@@ -51,6 +55,8 @@ class AppCoreTheme {
   final OpacityShades white;
   final OpacityShades black;
   final OpacityShades cardBg;
+  final OpacityShades disabled;
+  final OpacityShades chip;
 
   const AppCoreTheme({
     required this.primary,
@@ -64,6 +70,12 @@ class AppCoreTheme {
     required this.cardBg,
     required this.green,
     required this.lightGreen,
+    required this.red,
+    required this.textGrey,
+    required this.disabled,
+    required this.blue,
+    required this.searchfield,
+    required this.chip,
   });
 
   AppCoreTheme copyWith({
@@ -72,17 +84,24 @@ class AppCoreTheme {
     Color? teriary,
     Color? orange,
     Color? green,
+    Color? red,
+    Color? textGrey,
     Color? lightGreen,
+    Color? blue,
+    Color? searchfield,
+
     AppGradient? primaryGradient,
     AppGradient? secondaryGradient,
     OpacityShades? white,
     OpacityShades? black,
     OpacityShades? cardBg,
+    OpacityShades? disabled,
+    OpacityShades? chip,
   }) {
     return AppCoreTheme(
       primary: primary ?? this.primary,
       secondary: secondary ?? this.secondary,
-      tertiary: teriary ?? this.tertiary,
+      tertiary: teriary ?? tertiary,
       orange: orange ?? this.orange,
       primaryGradient: primaryGradient ?? this.primaryGradient,
       secondaryGradient: secondaryGradient ?? this.secondaryGradient,
@@ -91,6 +110,12 @@ class AppCoreTheme {
       cardBg: cardBg ?? this.cardBg,
       green: green ?? this.green,
       lightGreen: lightGreen ?? this.lightGreen,
+      red: red ?? this.red,
+      textGrey: textGrey ?? this.textGrey,
+      disabled: disabled ?? this.disabled,
+      blue: blue ?? this.blue,
+      searchfield: searchfield ?? this.searchfield,
+      chip: chip ?? this.chip,
     );
   }
 }

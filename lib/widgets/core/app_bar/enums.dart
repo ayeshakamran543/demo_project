@@ -4,8 +4,9 @@ enum AppBarType {
   withText,
   primary,
   textOnly,
-  withWidget,
+  withTrailingWidget,
   withTextCenter,
   textOnlyLeft,
-  stepper,
+  withLeadingWidget,
+  logo,
 }

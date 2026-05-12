@@ -8,20 +8,20 @@ class _Body extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(
         title: '@jayryan',
-        type: AppBarType.withWidget,
+        type: AppBarType.withTrailingWidget,
         trailingWidget: SvgPicture.asset(
           'assets/svgs/share.svg',
           width: 24.w,
           height: 24.h,
         ),
       ),
-      body: SingleChildScrollView(
-        child: AppBackground(
-          horizontalPadding: 0,
+      body: AppBackground(
+        horizontalPadding: 0,
 
-          includeBottomPadding: false,
+        includeBottomPadding: false,
 
-          backgroundImage: 'assets/pngs/playerProfile_bg.png',
+        backgroundImage: 'assets/pngs/playerProfile_bg.png',
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

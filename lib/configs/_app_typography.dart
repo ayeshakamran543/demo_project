@@ -43,7 +43,7 @@ class AppText {
   static TextStyle? l2xb;
 
   static void init(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(375, 812));
+    ScreenUtil.init(context, designSize: const Size(402, 874));
     const b = FontWeight.bold;
     const xb = FontWeight.w800; // Extra bold
 

@@ -21,7 +21,6 @@ class AppButton extends StatelessWidget {
   final Color? iconColor;
   final double? horizontalPadding;
   final double? spaceBetweenIconAndText;
-  final bool hasShadow;
   final double? verticalPadding;
   final Gradient? gradient;
 
@@ -42,7 +41,6 @@ class AppButton extends StatelessWidget {
     this.iconColor,
     this.horizontalPadding,
     this.spaceBetweenIconAndText,
-    this.hasShadow = false,
     this.verticalPadding,
     this.gradient,
   });
@@ -94,19 +92,10 @@ class AppButton extends StatelessWidget {
           border: _isOutlined
               ? Border.all(
                   color: isDisabled
-                      ? const Color(0xFFE5E9F7)
+                      ? AppTheme.c.disabled.s25
                       : borderColor ?? AppTheme.c.white.s40,
                   width: 1.w,
                 )
-              : null,
-          boxShadow: hasShadow
-              ? [
-                  BoxShadow(
-                    color: const Color(0x0F0D0D12),
-                    blurRadius: 2,
-                    offset: Offset(0.w, 1),
-                  ),
-                ]
               : null,
         ),
         padding: Space.vf(verticalPadding ?? 12),
@@ -142,8 +131,8 @@ class AppButton extends StatelessWidget {
             Text(
               label,
               style: isDisabled
-                  ? textStyle?.copyWith(color: AppTheme.c.white.base) ??
-                        AppText.b1bm!.cl(AppTheme.c.white.base)
+                  ? textStyle?.copyWith(color: AppTheme.c.white.s50) ??
+                        AppText.b1bm!.cl(AppTheme.c.white.s50)
                   : textStyle ??
                         AppText.b1bm!
                             .cl(

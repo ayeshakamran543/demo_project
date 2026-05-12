@@ -33,7 +33,7 @@ abstract class UIProps {
   static Gradient? secondaryGradient;
 
   static void init(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(375, 812));
+    ScreenUtil.init(context, designSize: const Size(402, 874));
 
     initRadius(context);
     initButtons();

@@ -24,17 +24,25 @@ class AppTheme {
 
     /// Card background base color (use opacity variants in UI)
     cardBg: const OpacityShades(Color(0xFF0B1C2D)),
+    disabled: const OpacityShades(Color(0xFFEBEBEB)),
+    chip: const OpacityShades(Color(0xFF0E1137)),
 
     green: const Color(0xFF67FF8D),
     lightGreen: const Color(0x4067FF8D),
 
     orange: const Color(0xFFF2A33A),
+
+    red: const Color(0xFFFF5257),
+    textGrey: const Color(0x800B1C2D),
+    blue: const Color(0xFF3B84C9),
+
+    searchfield: const Color(0xFF1E3F63),
   );
 
   static AppCoreTheme light = _core;
   static AppCoreTheme dark = _core;
 
-  static late AppCoreTheme c;
+  static AppCoreTheme c = _core;
 
   static bool isDark(BuildContext context) =>
       Theme.of(context).brightness == Brightness.dark;

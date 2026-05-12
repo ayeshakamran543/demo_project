@@ -9,7 +9,7 @@ class _Body extends StatelessWidget {
       backgroundColor: AppTheme.c.primary, // scaffold fills primary colour
       appBar: CustomAppBar(
         title: 'Donation Details',
-        type: AppBarType.withWidget,
+        type: AppBarType.withTrailingWidget,
         trailingWidget: SvgPicture.asset(
           'assets/svgs/share.svg',
           width: 24.w,

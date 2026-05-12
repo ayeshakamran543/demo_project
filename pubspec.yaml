@@ -43,8 +43,8 @@ dependencies:
   flutter_svg: ^2.2.4
 
   # forms
-  # form_builder_validators: ^11.0.0
-  # flutter_form_builder: ^10.2.0
+  form_builder_validators: ^11.0.0
+  flutter_form_builder: ^10.2.0
 
   # design
   gradient_borders: ^1.0.2

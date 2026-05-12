@@ -1,11 +1,15 @@
 import 'package:demo_app/router/routes.dart';
+import 'package:demo_app/screens/appbar_testing.dart';
 import 'package:demo_app/screens/donation_details/donation_details.dart';
 import 'package:demo_app/screens/player_profile/player_profile.dart';
+import 'package:demo_app/screens/sign_up.dart';
 import 'package:flutter/material.dart';
 
 final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.donationDetails: (_) => const DonationDetailsScreen(),
   AppRoutes.playerProfile: (_) => const PlayerProfileScreen(),
+  AppRoutes.signUp: (_) => const SignUpScreen(),
+  AppRoutes.testing: (_) => const TestingScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {
